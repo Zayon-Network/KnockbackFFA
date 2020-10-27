@@ -6,7 +6,7 @@
 
     <groupId>de.zayon</groupId>
     <artifactId>KnockbackFFA</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RC1</version>
     <packaging>jar</packaging>
 
     <name>KnockbackFFA</name>
@@ -110,7 +110,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.16.3-R0.1-SNAPSHOT</version>
+            <version>1.14.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -128,7 +128,7 @@
             <artifactId>spigot</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>C:/Users/Niklas/Downloads/build/spigot-1.16.3.jar</systemPath>
+            <systemPath>C:/Users/Niklas/Downloads/build/spigot-1.14.4.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>

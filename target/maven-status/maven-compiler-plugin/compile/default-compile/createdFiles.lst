@@ -26,4 +26,5 @@ de\zayon\knockbackffa\listener\PlayerInteractListener$1.class
 de\zayon\knockbackffa\util\DatabaseLib.class
 de\zayon\knockbackffa\data\ScoreboardData.class
 de\zayon\knockbackffa\manager\ScoreboardManager.class
+de\zayon\knockbackffa\listener\PlayerDeathListener$1.class
 de\zayon\knockbackffa\command\SetspawnCommand.class
