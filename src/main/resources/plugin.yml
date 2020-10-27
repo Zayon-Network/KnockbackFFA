@@ -1,0 +1,9 @@
+name: KnockbackFFA
+version: ${project.version}
+main: de.zayon.knockbackffa.KnockbackFFA
+api-version: 1.13
+depend: [MCCommons]
+authors: [DasNiklas]
+commands:
+  build:
+  setspawn:
