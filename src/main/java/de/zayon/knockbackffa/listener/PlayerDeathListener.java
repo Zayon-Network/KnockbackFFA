@@ -4,6 +4,8 @@ import de.zayon.knockbackffa.KnockbackFFA;
 import de.zayon.knockbackffa.data.StringData;
 import de.zayon.knockbackffa.factory.UserFactory;
 import de.zayon.knockbackffa.inventory.KitInventory;
+import de.zayon.zayon_core_api.PointsAPI.PointsAPI;
+import de.zayon.zayon_core_api.ZayonCoreApi;
 import net.minecraft.server.v1_14_R1.PacketPlayInClientCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -19,6 +21,8 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.Random;
+
 public class PlayerDeathListener implements Listener {
     private final KnockbackFFA knockbackFFA;
 
@@ -30,12 +34,13 @@ public class PlayerDeathListener implements Listener {
     public void handleDeath(PlayerDeathEvent event) {
         Player player = event.getEntity();
         Player killer = player.getKiller();
+        Random random = new Random();
 
         Bukkit.getScheduler().runTaskAsynchronously(KnockbackFFA.getKnockbackFFA(), new Runnable() {
             @Override
             public void run() {
                 PacketPlayInClientCommand packet = new PacketPlayInClientCommand(PacketPlayInClientCommand.EnumClientCommand.PERFORM_RESPAWN);
-                ((CraftPlayer)player).getHandle().playerConnection.a(packet);
+                ((CraftPlayer) player).getHandle().playerConnection.a(packet);
             }
         });
 
@@ -47,12 +52,17 @@ public class PlayerDeathListener implements Listener {
         }
         if (player.getKiller() != null) {
             this.knockbackFFA.getUserFactory().updateKills(killer, UserFactory.UpdateType.ADD, 1);
+
+            int
+
+            ZayonCoreApi.getZayonCoreApi().getPointsAPI().updatePoints(killer, PointsAPI.UpdateType.ADD, (random.nextInt((10 - 5) + 1) + 5));
+
             this.knockbackFFA.getUserFactory().updateDeaths(player, UserFactory.UpdateType.ADD, 1);
         } else {
             this.knockbackFFA.getUserFactory().updateDeaths(player, UserFactory.UpdateType.ADD, 1);
         }
         if (PlayerInteractListener.chargeItem.containsKey(player)) {
-            ((BukkitRunnable)PlayerInteractListener.chargeItem.get(player)).cancel();
+            ((BukkitRunnable) PlayerInteractListener.chargeItem.get(player)).cancel();
             PlayerInteractListener.chargeItem.remove(player);
         }
     }
