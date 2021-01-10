@@ -61,9 +61,9 @@
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: de.zayon:ZayonAPI:1.0-SNAPSHOT">
+      <library name="Maven: de.zayon:ZayonAPI:1.2.1-STABLE">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../ZayonAPI/target/ZayonAPI-1.2-STABLE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../ZayonAPI/target/ZayonAPI-1.2.1-STABLE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

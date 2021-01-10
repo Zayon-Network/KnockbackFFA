@@ -6,7 +6,7 @@
 
     <groupId>de.zayon</groupId>
     <artifactId>KnockbackFFA</artifactId>
-    <version>1.0-RC1</version>
+    <version>1.0-RC2</version>
     <packaging>jar</packaging>
 
     <name>KnockbackFFA</name>
@@ -139,9 +139,9 @@
         <dependency>
             <groupId>de.zayon</groupId>
             <artifactId>ZayonAPI</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.2.1-STABLE</version>
             <scope>system</scope>
-            <systemPath>E:/Projects/Plugins/ZayonAPI/target/ZayonAPI-1.2-STABLE.jar</systemPath>
+            <systemPath>E:/Projects/Plugins/ZayonAPI/target/ZayonAPI-1.2.1-STABLE.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
