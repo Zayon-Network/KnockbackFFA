@@ -39,6 +39,7 @@ public class KnockbackFFA extends JavaPlugin {
     @Getter private DatabaseLib databaseLib;
     @Getter private UserFactory userFactory;
     @Getter private PlayerDropListener playerDropListener;
+    @Getter private ServerPingListener serverPingListener;
 
 
     public void onEnable() {
@@ -57,6 +58,7 @@ public class KnockbackFFA extends JavaPlugin {
         this.playerDeathListener = new PlayerDeathListener(this);
         this.playerFishListener = new PlayerFishListener();
         this.playerDropListener = new PlayerDropListener(this);
+        this.serverPingListener = new ServerPingListener(this);
         this.buildCommand = new BuildCommand(this);
         this.setspawnCommand = new SetspawnCommand(this);
         this.userFactory.createTable();
@@ -69,6 +71,7 @@ public class KnockbackFFA extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(this.playerDeathListener, this);
         Bukkit.getPluginManager().registerEvents(this.playerFishListener, this);
         Bukkit.getPluginManager().registerEvents(this.playerDropListener, this);
+        Bukkit.getPluginManager().registerEvents(this.serverPingListener, this);
         Bukkit.getWorld("world").setGameRule(GameRule.ANNOUNCE_ADVANCEMENTS, Boolean.valueOf(false));
         Bukkit.getWorld("world").setGameRule(GameRule.DO_DAYLIGHT_CYCLE, Boolean.valueOf(false));
         Bukkit.getWorld("world").setGameRule(GameRule.DO_WEATHER_CYCLE, Boolean.valueOf(false));

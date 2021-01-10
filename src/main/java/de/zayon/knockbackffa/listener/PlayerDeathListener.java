@@ -4,8 +4,9 @@ import de.zayon.knockbackffa.KnockbackFFA;
 import de.zayon.knockbackffa.data.StringData;
 import de.zayon.knockbackffa.factory.UserFactory;
 import de.zayon.knockbackffa.inventory.KitInventory;
-import de.zayon.zayon_core_api.PointsAPI.PointsAPI;
-import de.zayon.zayon_core_api.ZayonCoreApi;
+import de.zayon.zayonapi.PointsAPI.PointsAPI;
+import de.zayon.zayonapi.ZayonAPI;
+import de.zayon.zayonapi.helper.ActionbarHelper;
 import net.minecraft.server.v1_14_R1.PacketPlayInClientCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -52,11 +53,9 @@ public class PlayerDeathListener implements Listener {
         }
         if (player.getKiller() != null) {
             this.knockbackFFA.getUserFactory().updateKills(killer, UserFactory.UpdateType.ADD, 1);
-
-            int
-
-            ZayonCoreApi.getZayonCoreApi().getPointsAPI().updatePoints(killer, PointsAPI.UpdateType.ADD, (random.nextInt((10 - 5) + 1) + 5));
-
+            int points = random.nextInt((10 - 5) + 1) + 5;
+            ZayonAPI.getZayonAPI().getPointsAPI().updatePoints(killer, PointsAPI.UpdateType.ADD, (points));
+            ActionbarHelper.sendActionBar(player, "§a+ " + points + " Punkte");
             this.knockbackFFA.getUserFactory().updateDeaths(player, UserFactory.UpdateType.ADD, 1);
         } else {
             this.knockbackFFA.getUserFactory().updateDeaths(player, UserFactory.UpdateType.ADD, 1);

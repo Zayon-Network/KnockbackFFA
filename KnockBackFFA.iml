@@ -63,7 +63,7 @@
     <orderEntry type="module-library">
       <library name="Maven: de.zayon:ZayonAPI:1.0-SNAPSHOT">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Zayon_Core_API/target/Zayon_Core_API-1.0-STABLE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../ZayonAPI/target/ZayonAPI-1.2-STABLE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

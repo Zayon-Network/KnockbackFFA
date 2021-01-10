@@ -28,7 +28,7 @@ public class BuildCommand implements CommandExecutor {
         if (!(commandSender instanceof Player))
             return true;
         Player player = (Player)commandSender;
-        if (!player.hasPermission("lobby.build")) {
+        if (!player.hasPermission("zayon.mod")) {
             player.sendMessage(StringData.combinate());
             return true;
         }
@@ -47,7 +47,7 @@ public class BuildCommand implements CommandExecutor {
                 player.sendMessage(StringData.getPrefix() + "§7Dein Editmodus wurde §aaktiviert§7.");
             }
         } else {
-            player.sendMessage(StringData.getPrefix() + "§7Synatx §8- §7/edit");
+            player.sendMessage(StringData.getPrefix() + "§7Synatx §8- §7/build");
         }
         return false;
     }
