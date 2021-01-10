@@ -46,6 +46,7 @@ public class PlayerDeathListener implements Listener {
         });
 
         event.setDeathMessage(null);
+        event.getDrops().clear();
         if (player.getKiller() != null) {
             Bukkit.broadcastMessage(StringData.getPrefix() + this.knockbackFFA.getGroupManager().getGroupColor(player) + player.getName() + " §7wurde von " + this.knockbackFFA.getGroupManager().getGroupColor(killer) + killer.getName() + " §7getötet.");
         } else {
@@ -55,11 +56,8 @@ public class PlayerDeathListener implements Listener {
             this.knockbackFFA.getUserFactory().updateKills(killer, UserFactory.UpdateType.ADD, 1);
             int points = random.nextInt((10 - 5) + 1) + 5;
             ZayonAPI.getZayonAPI().getPointsAPI().updatePoints(killer, PointsAPI.UpdateType.ADD, (points));
-            ActionbarHelper.sendActionBar(player, "§a+ " + points + " Punkte");
-            this.knockbackFFA.getUserFactory().updateDeaths(player, UserFactory.UpdateType.ADD, 1);
-        } else {
-            this.knockbackFFA.getUserFactory().updateDeaths(player, UserFactory.UpdateType.ADD, 1);
         }
+        this.knockbackFFA.getUserFactory().updateDeaths(player, UserFactory.UpdateType.ADD, 1);
         if (PlayerInteractListener.chargeItem.containsKey(player)) {
             ((BukkitRunnable) PlayerInteractListener.chargeItem.get(player)).cancel();
             PlayerInteractListener.chargeItem.remove(player);

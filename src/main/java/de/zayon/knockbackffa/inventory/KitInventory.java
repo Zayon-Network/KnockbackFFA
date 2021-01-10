@@ -61,6 +61,9 @@ public class KitInventory extends SpigotOnePageInventoryWrapper {
             player.getInventory().setItem(0, Items.createItemEnch2(Material.STICK, 0, "§cSchläger", Enchantment.KNOCKBACK));
             player.getInventory().setItem(8, Items.createItem(Material.CHEST, 0, "§cKits §7<Bauarbeiter§7>"));
             player.getInventory().setItem(1, Items.createItemA(Material.RED_SANDSTONE, 0, "§cSandstein", 64));
+        } else {
+            player.getInventory().setItem(8, Items.createItem(Material.CHEST, 0, "§cKits §7<Rechtsklick§7>"));
+            player.getInventory().setItem(0, Items.createItemEnch2(Material.STICK, 0, "§cSchläger", Enchantment.KNOCKBACK));
         }
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0F, 3.0F);
     }

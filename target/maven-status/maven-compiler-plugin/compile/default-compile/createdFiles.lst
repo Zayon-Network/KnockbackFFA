@@ -16,6 +16,7 @@ de\zayon\knockbackffa\listener\ProtectionListener.class
 de\zayon\knockbackffa\factory\UserFactory$UpdateType.class
 de\zayon\knockbackffa\listener\PlayerDeathListener.class
 de\zayon\knockbackffa\data\StringData.class
+de\zayon\knockbackffa\listener\PointsChangeListener.class
 de\zayon\knockbackffa\sidebar\SidebarCache.class
 de\zayon\knockbackffa\manager\GroupManager.class
 de\zayon\knockbackffa\inventory\KitInventory.class
@@ -23,6 +24,7 @@ de\zayon\knockbackffa\manager\ScoreboardManager$1.class
 de\zayon\knockbackffa\util\Items.class
 de\zayon\knockbackffa\KnockbackFFA.class
 de\zayon\knockbackffa\listener\PlayerInteractListener$1.class
+de\zayon\knockbackffa\listener\ServerPingListener.class
 de\zayon\knockbackffa\util\DatabaseLib.class
 de\zayon\knockbackffa\data\ScoreboardData.class
 de\zayon\knockbackffa\manager\ScoreboardManager.class

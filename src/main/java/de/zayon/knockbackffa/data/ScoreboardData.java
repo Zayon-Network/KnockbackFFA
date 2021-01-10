@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum ScoreboardData implements SidebarPage {
-    PAGE_1("§7» §cKnock Knock §7«", Arrays.asList("§r", "§8➤ §eKills:    ", "§f%kills%", "§r", "§8➤ §eTode:    ", "§f%deaths%", "§r", "§8➤ §eKD:    ", "§f%kd%"));
+    PAGE_1("§7» §cKnock Knock §7«", Arrays.asList("§r", "§8➤ §eKills:    ", "§f%kills%", "§r", "§8➤ §eTode:    ", "§f%deaths%", "§r", "§8➤ §eKD:    ", "§f%kd%", "§r", "§cTEAMS VERBOTEN","§7Zayon.de"));
 
     private final List<String> lines;
 

@@ -9,6 +9,8 @@ E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\listener\Pr
 E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\command\SetspawnCommand.java
 E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\listener\PlayerDeathListener.java
 E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\sidebar\Sidebar.java
+E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\listener\PointsChangeListener.java
+E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\listener\ServerPingListener.java
 E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\factory\UserFactory.java
 E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\sidebar\SidebarColorPool.java
 E:\Projects\Plugins\KnockBackFFA\src\main\java\de\zayon\knockbackffa\data\StringData.java

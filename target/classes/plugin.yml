@@ -1,5 +1,5 @@
 name: KnockbackFFA
-version: 1.0-RC1
+version: 1.0-RC2
 main: de.zayon.knockbackffa.KnockbackFFA
 api-version: 1.13
 depend: [MCCommons]
