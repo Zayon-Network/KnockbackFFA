@@ -1,8 +1,8 @@
 name: KnockbackFFA
 version: ${project.version}
-main: de.zayon.knockbackffa.KnockbackFFA
+main: de.nehlen.knockbackffa.KnockbackFFA
 api-version: 1.13
-depend: [MCCommons]
+depend: [MCCommons,GameAPI]
 authors: [DasNiklas]
 commands:
   build:
